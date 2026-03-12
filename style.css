@@ -175,3 +175,33 @@ nav a:hover {
     text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
     transition: 0.3s;
 }
+
+/* --- CINEMATIC VIDEO BACKGROUND --- */
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1; /* Keeps video behind everything */
+    overflow: hidden;
+}
+
+.video-background video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    /* The 8px blur creates that dreamy, high-end 'love story' feel */
+    filter: blur(8px) brightness(0.35); 
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Subtle gradient to ensure your gold logo and text pop */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), transparent);
+}
