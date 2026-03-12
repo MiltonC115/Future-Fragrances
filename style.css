@@ -1,12 +1,13 @@
 /* --- THE LUXURY REBRAND (CHAMPAGNE GOLD) --- */
 body {
     background-color: #000;
-    color: #E6D7C3; /* Champagne Gold base text */
+    color: #fff;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
-    overflow-y: auto !important; /* THIS LINE FIXES THE SCROLL */
-    scroll-behavior: smooth;
+    /* THIS IS THE CRITICAL LINE */
+    overflow-y: auto !important; 
+    display: block;
     min-height: 100vh;
 }
 
