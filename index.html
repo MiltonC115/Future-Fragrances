@@ -7,11 +7,18 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <meta name="p:domain_verify" content="b0bb43995cad8747814671066709258d"/>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #fff; color: #000; overflow-x: hidden; }
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 1s ease-out; }
+        @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;700&display=swap');
+        
+        body { font-family: 'Inter', sans-serif; background-color: #fff; color: #000; overflow-x: hidden; scroll-behavior: smooth; }
+        
+        h1, h2, h3, .syncopate { font-family: 'Syncopate', sans-serif; text-transform: uppercase; letter-spacing: -0.05em; }
+        
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
         .mix-blend-difference { mix-blend-difference: difference; }
+        
+        .product-card img { filter: grayscale(100%); transition: filter 0.5s ease; }
+        .product-card:hover img { filter: grayscale(0%); }
     </style>
 </head>
 <body>
@@ -24,187 +31,92 @@
             <a href="https://www.pinterest.com/futurefragrances" target="_blank" class="border-b border-white pb-1">Pinterest</a>
         </div>
     </nav>
-        :root {
-            --bg-color: #ffffff;
-            --text-color: #000000;
-        }
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-        }
-        h1, h2, .logo {
-            font-family: 'Syncopate', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        #scent-trail {
-            position: fixed;
-            width: 15px;
-            height: 15px;
-            background: rgba(0,0,0,0.1);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9999;
-            transition: transform 0.1s ease-out, opacity 0.3s ease;
-            mix-blend-mode: difference;
-        }
-        .highlight-offer {
-            animation: highlight-pulse 2s infinite ease-in-out;
-            outline: 2px solid black;
-            outline-offset: 10px;
-        }
-        @keyframes highlight-pulse {
-            0% { transform: scale(1); box-shadow: 0 0 0 rgba(0,0,0,0); }
-            50% { transform: scale(1.02); box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
-            100% { transform: scale(1); box-shadow: 0 0 0 rgba(0,0,0,0); }
-        }
-        .product-card img {
-            filter: grayscale(100%);
-            transition: filter 0.5s ease;
-        }
-        .product-card:hover img {
-            filter: grayscale(0%);
-        }
-    </style>
-</head>
-<body class="antialiased">
 
-    <div id="scent-trail"></div>
+    <section class="h-screen flex flex-col justify-center items-center text-center px-6">
+        <h1 class="text-6xl md:text-8xl font-bold mb-6 leading-none">The New<br>Standard</h1>
+        <p class="text-xs md:text-sm tracking-[0.4em] uppercase opacity-60">Atmospheric Curations for the Modern Soul</p>
+        <div class="absolute bottom-10 left-10 text-[10px] uppercase tracking-widest opacity-30">Scroll to Explore</div>
+    </section>
 
-    <nav class="fixed top-0 w-full z-50 mix-blend-difference py-8 px-10 flex justify-between items-center text-white">
-        <div class="logo text-xl font-bold tracking-widest">Future Fragrances</div>
-        <div class="hidden md:flex gap-8 text-sm uppercase font-semibold">
-            </div>
-        <div class="text-sm border-b border-white pb-1 cursor-pointer">Newsletter</div>
-    </nav>
-
-    <header class="h-screen flex flex-col justify-center items-center px-6 relative overflow-hidden">
-        <div class="z-10 text-center">
-            <h1 class="text-5xl md:text-8xl font-bold mb-4 reveal" id="hero-title">The New<br>Standard</h1>
-            <p class="text-lg md:text-xl font-light tracking-widest uppercase reveal" style="transition-delay: 0.2s;">Atmospheric Curations for the Modern Soul</p>
-        </div>
-        <div class="absolute bottom-10 left-10 text-xs uppercase tracking-widest opacity-40 vertical-text hidden md:block">
-            Scroll to Explore
-        </div>
-    </header>
-
-    <main class="max-w-7xl mx-auto px-6 py-20">
+    <section class="py-32 px-6 max-w-7xl mx-auto">
         <div class="product-grid reveal grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-
-            <div class="product-card text-center group" id="creed-aventus">
+            
+            <div class="product-card text-center group">
                 <div class="aspect-[3/4] overflow-hidden bg-gray-100 mb-8 rounded-lg">
-                    <img src="https://magenta-buttercream-e792c6.netlify.app/creed aventus image.jpg" alt="Creed Aventus" class="w-full h-full object-cover">
+                    <img src="https://magenta-buttercream-e792c6.netlify.app/creed%20aventus%20image.jpg" alt="Creed Aventus" class="w-full h-full object-cover">
                 </div>
-                <p class="text-[10px] uppercase tracking-widest text-gray-400 mb-2">The Original Masterpiece</p>
-                <h3 class="text-xl font-bold mb-4 uppercase">Creed Aventus</h3>
-                <p class="text-sm opacity-80 mb-6 px-4">A legendary, refined scent with fresh pineapple and a luxurious aura.</p>
+                <p class="text-[9px] tracking-[0.2em] uppercase opacity-50 mb-2">The Original Masterpiece</p>
+                <h3 class="text-lg font-bold mb-3">Creed Aventus</h3>
+                <p class="text-xs opacity-70 leading-relaxed mb-6 px-4">A legendary, refined scent with fresh pineapple and a luxurious aura.</p>
                 <p class="text-lg font-mono mb-8">$350.00</p>
-                <a href="https://amazon.com/dp/B071CYS5ZZ/?tag=futurefragran-20" target="_blank" class="border border-black px-8 py-3 text-xs font-bold tracking-widest rounded-full transition-colors hover:bg-black hover:text-white">SHOP NOW →</a>
+                <a href="https://amazon.com/dp/B071CYS5ZZ/?tag=futurefragran-20" target="_blank" class="border border-black px-8 py-3 text-[10px] font-bold tracking-widest rounded-full hover:bg-black hover:text-white transition-all uppercase">Shop Now →</a>
             </div>
 
-            <div class="product-card text-center group" id="club-de-nuit">
+            <div class="product-card text-center group">
                 <div class="aspect-[3/4] overflow-hidden bg-gray-100 mb-8 rounded-lg">
-                    <img src="https://magenta-buttercream-e792c6.netlify.app/club de nuit image.jpg" alt="Club De Nuit" class="w-full h-full object-cover">
+                    <img src="https://magenta-buttercream-e792c6.netlify.app/club%20de%20nuit%20image.jpg" alt="Club de Nuit" class="w-full h-full object-cover">
                 </div>
-                <p class="text-[10px] uppercase tracking-widest text-gray-400 mb-2">The Future Dupe</p>
-                <h3 class="text-xl font-bold mb-4 uppercase">Club De Nuit</h3>
-                <p class="text-sm opacity-80 mb-6 px-4">Dynamic and long-lasting with bold projection for every season.</p>
+                <p class="text-[9px] tracking-[0.2em] uppercase opacity-50 mb-2">The Future Dupe</p>
+                <h3 class="text-lg font-bold mb-3">Club De Nuit</h3>
+                <p class="text-xs opacity-70 leading-relaxed mb-6 px-4">Dynamic and long-lasting with bold projection for every season.</p>
                 <p class="text-lg font-mono mb-8">$45.00</p>
-                <a href="https://amazon.com/dp/B084D1N7JJ/?tag=futurefragran-20" target="_blank" class="border border-black px-8 py-3 text-xs font-bold tracking-widest rounded-full transition-colors hover:bg-black hover:text-white">SHOP NOW →</a>
+                <a href="https://amazon.com/dp/B084D1N7JJ/?tag=futurefragran-20" target="_blank" class="border border-black px-8 py-3 text-[10px] font-bold tracking-widest rounded-full hover:bg-black hover:text-white transition-all uppercase">Shop Now →</a>
             </div>
 
-            <div class="product-card text-center group" id="lafayette-bond">
+            <div class="product-card text-center group">
                 <div class="aspect-[3/4] overflow-hidden bg-gray-100 mb-8 rounded-lg">
-                    <img src="https://magenta-buttercream-e792c6.netlify.app/Lafayette%20image.jpg" alt="Lafayette Bond" class="w-full h-full object-cover">
+                    <img src="https://magenta-buttercream-e792c6.netlify.app/Lafayette%20image.jpg" alt="Bond No 9" class="w-full h-full object-cover">
                 </div>
-                <p class="text-[10px] uppercase tracking-widest text-gray-400 mb-2">Refined Urban Elegance</p>
-                <h3 class="text-xl font-bold mb-4 uppercase">Lafayette Bond</h3>
-                <p class="text-sm opacity-80 mb-6 px-4">A sophisticated blend of creamy vanilla and warm ambroxan.</p>
+                <p class="text-[9px] tracking-[0.2em] uppercase opacity-50 mb-2">Refined Urban Elegance</p>
+                <h3 class="text-lg font-bold mb-3">Lafayette Bond</h3>
+                <p class="text-xs opacity-70 leading-relaxed mb-6 px-4">A sophisticated blend of creamy vanilla and warm ambroxan.</p>
                 <p class="text-lg font-mono mb-8">$350.00</p>
-                <a href="https://amazon.com/dp/B0D87HSC4R/?tag=futurefragran-20" target="_blank" class="border border-black px-8 py-3 text-xs font-bold tracking-widest rounded-full transition-colors hover:bg-black hover:text-white">SHOP NOW →</a>
+                <a href="https://amazon.com/dp/B0D87HSC4R/?tag=futurefragran-20" target="_blank" class="border border-black px-8 py-3 text-[10px] font-bold tracking-widest rounded-full hover:bg-black hover:text-white transition-all uppercase">Shop Now →</a>
             </div>
 
-            <div class="product-card text-center group" id="nikos-sculpture">
+            <div class="product-card text-center group">
                 <div class="aspect-[3/4] overflow-hidden bg-gray-100 mb-8 rounded-lg">
-                    <img src="https://magenta-buttercream-e792c6.netlify.app/Nikos sculpture image.jpg" alt="Nikos Sculpture" class="w-full h-full object-cover">
+                    <img src="https://magenta-buttercream-e792c6.netlify.app/Nikos%20sculpture%20image.jpg" alt="Nikos Sculpture" class="w-full h-full object-cover">
                 </div>
-                <p class="text-[10px] uppercase tracking-widest text-gray-400 mb-2">Affordable Hidden Gem</p>
-                <h3 class="text-xl font-bold mb-4 uppercase">Nikos Sculpture</h3>
-                <p class="text-sm opacity-80 mb-6 px-4">Smooth vanilla and ambroxan DNA offering a path to elegance.</p>
+                <p class="text-[9px] tracking-[0.2em] uppercase opacity-50 mb-2">Affordable Hidden Gem</p>
+                <h3 class="text-lg font-bold mb-3">Nikos Sculpture</h3>
+                <p class="text-xs opacity-70 leading-relaxed mb-6 px-4">Smooth vanilla and ambroxan DNA offering a path to elegance.</p>
                 <p class="text-lg font-mono mb-8">$30.00</p>
-                <a href="https://amazon.com/dp/B000E7WGFG/?tag=futurefragran-20" target="_blank" class="border border-black px-8 py-3 text-xs font-bold tracking-widest rounded-full transition-colors hover:bg-black hover:text-white">SHOP NOW →</a>
+                <a href="https://amazon.com/dp/B000E7WGFG/?tag=futurefragran-20" target="_blank" class="border border-black px-8 py-3 text-[10px] font-bold tracking-widest rounded-full hover:bg-black hover:text-white transition-all uppercase">Shop Now →</a>
             </div>
 
         </div>
-    </main>
+    </section>
 
     <footer class="bg-black text-white py-24 px-6 text-center border-t border-gray-800">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold mb-12 tracking-widest uppercase">Customer Care</h2>
             <div class="grid md:grid-cols-3 gap-12 mb-16 text-left">
                 <div>
-                    <h4 class="text-xs uppercase font-bold mb-4 tracking-widest text-gray-400">Shipping</h4>
-                    <p class="text-sm opacity-80 leading-relaxed">Fulfilled by Amazon. Enjoy fast, reliable delivery and real-time tracking on every order.</p>
+                    <h4 class="text-[10px] uppercase font-bold mb-4 tracking-widest text-gray-500">Shipping</h4>
+                    <p class="text-xs opacity-70 leading-relaxed">Fulfilled by Amazon. Fast, reliable delivery on every order.</p>
                 </div>
                 <div>
-                    <h4 class="text-xs uppercase font-bold mb-4 tracking-widest text-gray-400">Returns</h4>
-                    <p class="text-sm opacity-80 leading-relaxed">Shop with confidence. All purchases are backed by a 30-day return guarantee via Amazon.</p>
+                    <h4 class="text-[10px] uppercase font-bold mb-4 tracking-widest text-gray-500">Returns</h4>
+                    <p class="text-xs opacity-70 leading-relaxed">30-day return guarantee via our Amazon partnership.</p>
                 </div>
                 <div>
-                    <h4 class="text-xs uppercase font-bold mb-4 tracking-widest text-gray-400">Our Story</h4>
-                    <p class="text-sm opacity-80 leading-relaxed">Future Fragrances curates the world’s most iconic scents. We bridge the gap between luxury and accessibility. Questions? Contact us at: <br><strong>shopfuturefragrances@gmail.com</strong></p>
+                    <h4 class="text-[10px] uppercase font-bold mb-4 tracking-widest text-gray-500">Contact</h4>
+                    <p class="text-xs opacity-70 leading-relaxed font-bold">shopfuturefragrances@gmail.com</p>
                 </div>
             </div>
             <div class="pt-8 border-t border-gray-900">
                 <p class="text-[10px] uppercase tracking-widest opacity-40 mb-4">© 2026 Future Fragrances. As an Amazon Associate, we earn from qualifying purchases.</p>
-                <div class="flex justify-center gap-10">
-                    <a href="https://www.pinterest.com/futurefragrances" target="_blank" class="text-xs uppercase font-bold border-b border-white pb-1 tracking-widest">Pinterest</a>
-                </div>
+                <a href="https://www.pinterest.com/futurefragrances" target="_blank" class="text-xs uppercase font-bold border-b border-white pb-1 tracking-[0.2em]">Pinterest</a>
             </div>
         </div>
     </footer>
 
     <script>
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                if (elementTop < windowHeight - 150) {
-                    reveals[i].classList.add("active");
-                }
-            }
-        }
-        window.addEventListener("scroll", reveal);
-        window.onload = () => reveal();
-
-        const trail = document.getElementById('scent-trail');
-        document.addEventListener('mousemove', (e) => {
-            trail.style.left = e.clientX + 'px';
-            trail.style.top = e.clientY + 'px';
-            trail.style.opacity = '1';
-        });
-
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const heroTitle = document.getElementById('hero-title');
-            if(heroTitle) {
-                heroTitle.style.transform = `translateY(${scrolled * 0.4}px)`;
-                heroTitle.style.opacity = 1 - (scrolled / 700);
-            }
-        });
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+        }, observerOptions);
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
 </body>
 </html>
