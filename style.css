@@ -86,3 +86,33 @@ body {
     font-size: 0.75rem;
     text-decoration: underline;
 }
+
+/* --- LUXURY HERO IMAGE GLOW --- */
+
+.card-image-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    /* This creates the soft glow effect behind the bottle */
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    /* Adds a subtle drop shadow to the bottle itself for depth */
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.5));
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* Enhances the glow when the user hovers over the card */
+.luxury-card:hover .card-image-wrapper img {
+    transform: scale(1.05);
+    filter: drop-shadow(0 15px 25px rgba(212, 175, 55, 0.3));
+}
+
+
+
