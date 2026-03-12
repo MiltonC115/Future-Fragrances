@@ -3,11 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="p:domain_verify" content="b0bb43995cad8747814671066709258d"/>
-    <title>Future Fragrances | Curated Scents</title>
+    <title>Future Fragrances | The New Standard</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta name="p:domain_verify" content="b0bb43995cad8747814671066709258d"/>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #fff; color: #000; overflow-x: hidden; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 1s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .mix-blend-difference { mix-blend-difference: difference; }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50 px-10 py-6 flex justify-between items-center mix-blend-difference text-white">
+        <div class="logo-container">
+            <img src="ff.png" alt="Future Fragrances Logo" class="h-12 w-auto object-contain">
+        </div>
+        <div class="flex gap-8 text-[10px] uppercase tracking-widest font-bold">
+            <a href="https://www.pinterest.com/futurefragrances" target="_blank" class="border-b border-white pb-1">Pinterest</a>
+        </div>
+    </nav>
         :root {
             --bg-color: #ffffff;
             --text-color: #000000;
@@ -154,7 +170,7 @@
             <div class="pt-8 border-t border-gray-900">
                 <p class="text-[10px] uppercase tracking-widest opacity-40 mb-4">© 2026 Future Fragrances. As an Amazon Associate, we earn from qualifying purchases.</p>
                 <div class="flex justify-center gap-10">
-                    <a href="#" class="text-xs uppercase font-bold border-b border-white pb-1">Pinterest</a>
+                    <a href="https://www.pinterest.com/futurefragrances" target="_blank" class="text-xs uppercase font-bold border-b border-white pb-1 tracking-widest">Pinterest</a>
                 </div>
             </div>
         </div>
