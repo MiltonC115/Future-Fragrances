@@ -93,12 +93,12 @@
     <nav class="fixed top-0 w-full z-50 mix-blend-difference py-8 px-10 flex justify-between items-center text-white">
         <div class="logo text-xl font-bold tracking-widest">Future Fragrances</div>
         <div class="hidden md:flex gap-8 text-sm uppercase font-semibold">
-            <a href="#" class="hover:opacity-50 transition">Collections</a>
-            <a href="#" class="hover:opacity-50 transition">The Science</a>
-            <a href="#" class="hover:opacity-50 transition">Journal</a>
+          <!--  <a href="#" class="hover:opacity-50 transition">Collections</a> --> 
+          <!-- <a href="#" class="hover:opacity-50 transition">The Science</a> --> 
+          <!--  <a href="#" class="hover:opacity-50 transition">Journal</a> -->
         </div>
-        <div class="text-sm border-b border-white pb-1 cursor-pointer">Newsletter</div>
-    </nav>
+       <!-- <div class="text-sm border-b border-white pb-1 cursor-pointer">Newsletter</div>
+    </nav> 
 
     <!-- Hero Section -->
     <header class="h-screen flex flex-col justify-center items-center px-6 relative overflow-hidden">
@@ -115,84 +115,106 @@
         </div>
     </header>
 
-    <!-- Content Grid (Where your Pinterest links lead) -->
+ 
     <main class="max-w-7xl mx-auto px-6 py-20">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
             
-            <!-- Item 1: SCENT-01 -->
-            <div id="scent-01" class="product-card reveal group cursor-pointer" onclick="handleAffiliate('https://example.com/affiliate-1')">
-                <div class="relative overflow-hidden aspect-[3/4] mb-6 bg-gray-50 flex items-center justify-center">
-                    <!-- Placeholder SVG for Fragrance Bottle -->
-                    <svg class="w-1/2 h-1/2 opacity-20" viewBox="0 0 100 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="20" y="40" width="60" height="90" rx="4" stroke="black" stroke-width="2"/>
-                        <path d="M40 40V20H60V40" stroke="black" stroke-width="2"/>
-                    </svg>
-                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-5 transition-all duration-500"></div>
-                </div>
-                <h3 class="text-xs uppercase tracking-widest mb-1 opacity-50">Floral / Ozone</h3>
-                <h2 class="text-2xl font-bold mb-4">Electric Jasmine</h2>
-                <p class="text-sm leading-relaxed mb-6 opacity-80">A high-voltage interpretation of night-blooming jasmine, grounded by cold metallic notes.</p>
-                <div class="flex justify-between items-center">
-                    <span class="text-lg font-bold strikethrough">$145.00</span>
-                    <span class="text-xs font-bold uppercase tracking-widest border border-black px-4 py-2 hover:bg-black hover:text-white transition">Get Offer →</span>
-                </div>
-            </div>
+         <div class="product-grid reveal grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 px-6 max-w-7xl mx-auto py-24">
 
-            <!-- Item 2: SCENT-02 -->
-            <div id="scent-02" class="product-card reveal group cursor-pointer" style="transition-delay: 0.1s;" onclick="handleAffiliate('https://example.com/affiliate-2')">
-                <div class="relative overflow-hidden aspect-[3/4] mb-6 bg-gray-50 flex items-center justify-center">
-                    <svg class="w-1/2 h-1/2 opacity-20" viewBox="0 0 100 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="25" y="50" width="50" height="80" rx="25" stroke="black" stroke-width="2"/>
-                        <circle cx="50" cy="35" r="10" stroke="black" stroke-width="2"/>
-                    </svg>
-                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-5 transition-all duration-500"></div>
-                </div>
-                <h3 class="text-xs uppercase tracking-widest mb-1 opacity-50">Wood / Smoke</h3>
-                <h2 class="text-2xl font-bold mb-4">Midnight Cedar</h2>
-                <p class="text-sm leading-relaxed mb-6 opacity-80">Ancient woods meeting the sharp reality of a modern city at 3 AM. Deep, smoky, and persistent.</p>
-                <div class="flex justify-between items-center">
-                    <span class="text-lg font-bold strikethrough">$120.00</span>
-                    <span class="text-xs font-bold uppercase tracking-widest border border-black px-4 py-2 hover:bg-black hover:text-white transition">Get Offer →</span>
-                </div>
-            </div>
+    <div class="product-card text-center group">
+        <div class="aspect-[3/4] overflow-hidden bg-gray-100 mb-8 rounded-lg shadow-inner">
+            <img src="images/fragrance-01.jpg" alt="Creed Aventus" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+        </div>
+        <p class="text-[10px] uppercase tracking-widest text-gray-400 mb-2">The Original Masterpiece</p>
+        <h3 class="text-xl font-bold tracking-tight mb-4 text-white uppercase">Creed Aventus</h3>
+        <p class="text-sm opacity-80 leading-relaxed mb-6 px-4">A legendary, refined scent that blends fresh pineapple notes with a luxurious, clean aura.</p>
+        <p class="text-lg font-mono mb-8 text-white">$350.00</p>
+        <a href="https://amazon.com/dp/B071CYS5ZZ/?tag=futurefragran-20" target="_blank" class="shop-now-btn inline-flex items-center gap-2 border border-white text-white px-8 py-3 text-xs uppercase font-bold tracking-widest rounded-full transition-colors hover:bg-white hover:text-black">
+            SHOP NOW →
+        </a>
+    </div>
 
-            <!-- Item 3: SCENT-03 -->
-            <div id="scent-03" class="product-card reveal group cursor-pointer" style="transition-delay: 0.2s;" onclick="handleAffiliate('https://example.com/affiliate-3')">
-                <div class="relative overflow-hidden aspect-[3/4] mb-6 bg-gray-50 flex items-center justify-center">
-                    <svg class="w-1/2 h-1/2 opacity-20" viewBox="0 0 100 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="15" y="45" width="70" height="90" fill="none" stroke="black" stroke-width="2"/>
-                        <path d="M50 45V15M40 15H60" stroke="black" stroke-width="2"/>
-                    </svg>
-                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-5 transition-all duration-500"></div>
-                </div>
-                <h3 class="text-xs uppercase tracking-widest mb-1 opacity-50">Citrus / Ash</h3>
-                <h2 class="text-2xl font-bold mb-4">Silver Bergamot</h2>
-                <p class="text-sm leading-relaxed mb-6 opacity-80">Cold-pressed citrus notes layered over a foundation of volcanic ash and white musk.</p>
-                <div class="flex justify-between items-center">
-                    <span class="text-lg font-bold strikethrough">$160.00</span>
-                    <span class="text-xs font-bold uppercase tracking-widest border border-black px-4 py-2 hover:bg-black hover:text-white transition">Get Offer →</span>
-                </div>
-            </div>
+    <div class="product-card text-center group">
+        <div class="aspect-[3/4] overflow-hidden bg-gray-100 mb-8 rounded-lg shadow-inner">
+            <img src="images/fragrance-02.jpg" alt="Armaf Club de Nuit" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+        </div>
+        <p class="text-[10px] uppercase tracking-widest text-gray-400 mb-2">The Future Dupe</p>
+        <h3 class="text-xl font-bold tracking-tight mb-4 text-white uppercase">Club de Nuit Intense</h3>
+        <p class="text-sm opacity-80 leading-relaxed mb-6 px-4">A dynamic, long-lasting fragrance with bold projection, bringing that same luxurious vibe into every season.</p>
+        <p class="text-lg font-mono mb-8 text-white">$45.00</p>
+        <a href="https://amazon.com/dp/B084D1N7JJ/?tag=futurefragran-20" target="_blank" class="shop-now-btn inline-flex items-center gap-2 border border-white text-white px-8 py-3 text-xs uppercase font-bold tracking-widest rounded-full transition-colors hover:bg-white hover:text-black">
+            SHOP NOW →
+        </a>
+    </div>
+
+    <div class="product-card text-center group">
+        <div class="aspect-[3/4] overflow-hidden bg-gray-100 mb-8 rounded-lg shadow-inner">
+            <img src="images/fragrance-03.jpg" alt="Lafayette Bond No. 9" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+        </div>
+        <p class="text-[10px] uppercase tracking-widest text-gray-400 mb-2">Refined Urban Elegance</p>
+        <h3 class="text-xl font-bold tracking-tight mb-4 text-white uppercase">Lafayette Bond No. 9</h3>
+        <p class="text-sm opacity-80 leading-relaxed mb-6 px-4">A sophisticated blend of creamy vanilla, warm ambroxan, and a touch of aromatic florals.</p>
+        <p class="text-lg font-mono mb-8 text-white">$350.00</p>
+        <a href="https://amazon.com/dp/B0D87HSC4R/?tag=futurefragran-20" target="_blank" class="shop-now-btn inline-flex items-center gap-2 border border-white text-white px-8 py-3 text-xs uppercase font-bold tracking-widest rounded-full transition-colors hover:bg-white hover:text-black">
+            SHOP NOW →
+        </a>
+    </div>
+
+    <div class="product-card text-center group">
+        <div class="aspect-[3/4] overflow-hidden bg-gray-100 mb-8 rounded-lg shadow-inner">
+            <img src="images/fragrance-04.jpg" alt="Nikos Sculpture" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+        </div>
+        <p class="text-[10px] uppercase tracking-widest text-gray-400 mb-2">Affordable Hidden Gem</p>
+        <h3 class="text-xl font-bold tracking-tight mb-4 text-white uppercase">Nikos Sculpture</h3>
+        <p class="text-sm opacity-80 leading-relaxed mb-6 px-4">With a shared DNA of smooth vanilla and ambroxan notes, offering a budget-friendly path to elegance.</p>
+        <p class="text-lg font-mono mb-8 text-white">$30.00</p>
+        <a href="https://amazon.com/dp/B000E7WGFG/?tag=futurefragran-20" target="_blank" class="shop-now-btn inline-flex items-center gap-2 border border-white text-white px-8 py-3 text-xs uppercase font-bold tracking-widest rounded-full transition-colors hover:bg-white hover:text-black">
+            SHOP NOW →
+        </a>
+    </div>
+
+</div>
 
         </div>
     </main>
-
-    <!-- Footer / Pinterest Guide -->
-    <footer class="bg-black text-white py-24 px-6 text-center">
-        <div class="max-w-2xl mx-auto">
-            <h2 class="text-3xl font-bold mb-8">Pinterest Guide</h2>
-            <p class="text-sm opacity-60 leading-relaxed mb-12">
-                Use your custom links to send Pinners directly to their scent. 
-                Example: futurefragrances.com/#scent-01 will auto-scroll and highlight 
-                the first fragrance in the collection.
-            </p>
-            <div class="flex justify-center gap-10">
-                <a href="#" class="text-xs uppercase font-bold border-b border-white pb-1 tracking-widest">Pinterest</a>
-                <a href="#" class="text-xs uppercase font-bold border-b border-white pb-1 tracking-widest">Instagram</a>
-                <a href="#" class="text-xs uppercase font-bold border-b border-white pb-1 tracking-widest">TikTok</a>
+<section class="py-20 px-6 bg-black text-white border-t border-gray-800">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold uppercase tracking-widest mb-8">Our Story</h2>
+    <p class="text-lg leading-relaxed opacity-80 max-w-2xl mx-auto">
+      Future Fragrances was born from a passion for scent and science. We curate 
+      premium collections that bridge the gap between classic elegance and 
+      modern innovation. Every bottle tells a story of craftsmanship and 
+      discovery.
+    </p>
+  </div>
+</section>
+   <footer class="bg-black text-white py-24 px-6 text-center border-t border-gray-800">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-12 tracking-widest uppercase">Customer Care</h2>
+        
+        <div class="grid md:grid-cols-3 gap-12 mb-16 text-left">
+            <div>
+                <h4 class="text-xs uppercase font-bold mb-4 tracking-widest text-gray-400">Shipping</h4>
+                <p class="text-sm opacity-80 leading-relaxed">Fast, tracked delivery on all fragrance orders. Domestic shipping takes 5-7 business days.</p>
+            </div>
+            <div>
+                <h4 class="text-xs uppercase font-bold mb-4 tracking-widest text-gray-400">Returns</h4>
+                <p class="text-sm opacity-80 leading-relaxed">30-day return policy for unopened items. Satisfaction guaranteed with every bottle.</p>
+            </div>
+            <div>
+                <h4 class="text-xs uppercase font-bold mb-4 tracking-widest text-gray-400">Support</h4>
+                <p class="text-sm opacity-80 leading-relaxed">Questions? Contact us at: <br><strong>support@futurefragrances.com</strong></p>
             </div>
         </div>
-    </footer>
+
+        <div class="pt-8 border-t border-gray-900">
+            <p class="text-[10px] uppercase tracking-widest opacity-40 mb-4">© 2026 Future Fragrances. Fulfilled via our logistics partnership with Amazon.</p>
+            <div class="flex justify-center gap-10">
+                <a href="#" class="text-xs uppercase font-bold border-b border-white pb-1 tracking-widest">Pinterest</a>
+            </div>
+        </div>
+    </div>
+</footer>
 
     <script>
         // Scroll Reveal Logic
