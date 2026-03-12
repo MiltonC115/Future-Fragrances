@@ -115,3 +115,28 @@ body {
     /* Glow becomes more intense and gold on hover */
     filter: drop-shadow(0 20px 35px rgba(212, 175, 55, 0.4));
 }
+
+/* --- STORIES PAGE SPECIFIC STYLING --- */
+
+/* This makes the long text on your stories page easier to read */
+article {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+article p {
+    font-size: 0.9rem;
+    line-height: 2; /* Gives that luxury 'breathing room' */
+    letter-spacing: 0.05em;
+    color: #bbb;
+    margin-bottom: 30px;
+    text-align: justify; /* Optional: makes it look like a high-end magazine */
+}
+
+/* This styles the 'Back to Collection' link specifically */
+nav a:hover {
+    color: #fff !important;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    transition: 0.3s;
+}
