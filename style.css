@@ -5,7 +5,9 @@ body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
+    overflow-y: auto !important; /* THIS LINE FIXES THE SCROLL */
     scroll-behavior: smooth;
+    min-height: 100vh;
 }
 
 /* --- HERO & LOGO REBRAND --- */
@@ -186,15 +188,14 @@ nav a:hover {
     height: 100vh;
     z-index: -1; 
     overflow: hidden;
-    /* ADD THIS LINE TO FIX SCROLLING */
+    /* KEY FIX: Allows you to scroll 'through' the video */
     pointer-events: none; 
 }
 
 .video-background video {
     width: 100vw;
     height: 100vh;
-    object-fit: cover;
-    /* The 8px blur creates that dreamy, high-end 'love story' feel */
+    object-fit: cover; /* This makes it fill the screen like a wallpaper */
     filter: blur(8px) brightness(0.35); 
 }
 
